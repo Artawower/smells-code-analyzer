@@ -1,11 +1,9 @@
 {
   "name": "smells-code-analyzer",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "CLI tool powered by LSP and tree-sitter for finding dead and smells code from your project",
   "main": "dist/index.js",
-  "files": [
-    "dist/**"
-  ],
+  "files": ["dist/**"],
   "type": "module",
   "bin": {
     "sca": "dist/index.js"
@@ -19,12 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/Artawower/smells-code-analyzer.git"
   },
-  "keywords": [
-    "cli",
-    "code-analyzer",
-    "tree-sitter",
-    "lsp"
-  ],
+  "keywords": ["cli", "code-analyzer", "tree-sitter", "lsp"],
   "author": "darkawower <artawower@protonmail.com> (https://du-blog.ru/)",
   "license": "MIT",
   "bugs": {
