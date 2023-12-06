@@ -1,6 +1,6 @@
 {
   "name": "smells-code-analyzer",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "CLI tool powered by LSP and tree-sitter for finding dead and smells code from your project",
   "main": "dist/index.js",
   "files": ["dist/**"],
@@ -8,10 +8,14 @@
   "bin": {
     "sca": "dist/index.js"
   },
+  "exports": {
+    ".": "./dist/*"
+  },
   "scripts": {
     "dev": "ts-node --esm ./src/index.ts",
-    "build": "npm run clear && tsc --project tsconfig.json && chmod +x ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --project tsconfig.json && chmod +x ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -35,11 +39,11 @@
   },
   "dependencies": {
     "@vscode/ripgrep": "1.15.9",
-    "commander": "^11.1.0",
+    "commander": "11.1.0",
     "ripgrep-node": "1.0.0",
     "ripgrep-wrapper": "1.1.1",
     "tree-sitter": "0.20.6",
     "tree-sitter-typescript": "0.20.3",
-    "walk-sync": "^3.0.0"
+    "walk-sync": "3.0.0"
   }
 }
