@@ -24,12 +24,11 @@ async function analyzeProject(config: SmellsCodeAnalyzerConfig): Promise<void> {
   // const fileInfo = await analyzeFile(
   //   config,
   //   lsp,
-  //   '/Users/darkawower/projects/ui/src/app/shared/directives/disable-control/disable-control.directive.spec.ts'
+  //   '/Users/darkawower/projects/ui/src/app/report/components/report-grid/components/child-counted-row-group-renderer/child-counted-row-group-renderer.component.ts'
   // );
   // console.log(
   //   `✎: [index.ts][${new Date().toString()}] rep`,
-  //   JSON.stringify(fileInfo, null, 2),
-  //   buildReport(fileInfo)
+  //   buildReport(fileInfo, config.showPassed)
   // );
 
   for (const filePath of filesForAnalysis) {
@@ -62,7 +61,15 @@ async function analyzeFile(
   // console.log('✎: [line 48][index.ts] sourceCodeWithoutComments: ', sourceCodeWithoutComments)
   // writeFileSync(filePath, sourceCodeWithoutComments);
   // sourceCode = readFileSync(filePath).toString();
-  const sourceCodeWithoutComments = sourceCode;
+  const sourceCodeWithoutComments = sourceCode
+    .replace(/\/\/([^\/\n]*)$/gm, '')
+    .replace(/\/\*[\s\S]*\*\//gm, '')
+    .replace(/console.log\([^)]*\);/gm, '')
+    .replace(/[^\x00-\x7F]{1}/g, ' ')
+    .replace(
+      /[аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯ]{1}/g,
+      ''
+    );
   const foundNodes = findElemPositions(config, sourceCodeWithoutComments);
 
   await lsp.didOpen({
@@ -94,7 +101,7 @@ async function analyzeCodeBlock(
       textDocument: { uri: pathToFileURL(filePath).href },
       position: {
         line: nodeInfo.startPos.row,
-        character: nodeInfo.startPos.column + 1,
+        character: nodeInfo.startPos.column,
       },
     });
 

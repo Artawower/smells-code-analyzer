@@ -2,10 +2,10 @@ import { FullNodeInfo } from './node-info.js';
 
 export function buildReport(
   fullNodesInfo: FullNodeInfo[],
+  showAll = false,
   includeFileName = true,
   tabs = 0,
-  blockSeparator = '\n' + '-'.repeat(80),
-  showAll = false
+  blockSeparator = '\n' + '-'.repeat(80)
 ): string {
   if (!fullNodesInfo?.length) {
     return '';
@@ -25,14 +25,16 @@ export function buildReport(
 
       const baseInfo = `${'\t'.repeat(tabs)}[${
         reasons.length === 0 ? '✅' : '💩'
-      }] ${n.name} :: (${reasons.join(', ')})`;
+      }] ${n.name}:${n.startPos.row}:${n.startPos.column} :: (${reasons.join(
+        ', '
+      )})`;
 
       const childrenInfo = buildReport(
         n.children,
+        showAll,
         false,
         tabs + 1,
-        '',
-        showAll
+        ''
       );
       if (!childrenInfo?.length) {
         return baseInfo;
