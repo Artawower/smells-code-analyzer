@@ -1,9 +1,8 @@
 import { SmellsCodeAnalyzerConfig } from './config.js';
-import Parser, { Tree } from 'tree-sitter';
-import { SyntaxNode } from 'tree-sitter';
-// const typescript = require('tree-sitter-typescript').typescript;
+import Parser, { Tree, SyntaxNode } from 'tree-sitter';
 import parser from 'tree-sitter-typescript';
 import { NodeInfo } from './node-info';
+import { NodeTarget } from './config.js';
 
 export const Grammars = {
   typescript: parser.typescript,
@@ -14,7 +13,7 @@ export function findElemPositions(
   sourceCode: string
 ): NodeInfo[] {
   const tree = parse(config, sourceCode);
-  const foundNodes = findNodes(tree);
+  const foundNodes = findNodes(config.referenceNodes, tree);
   return foundNodes;
 }
 
@@ -29,33 +28,62 @@ function parse(config: SmellsCodeAnalyzerConfig, sourceCode: string): Tree {
   return tree;
 }
 
-function findNodes(tree: Tree): NodeInfo[] {
-  // Find all interfaces from tree
+function findNodes(
+  referenceNodes: NodeTarget[],
+  tree: Tree,
+  parent?: SyntaxNode
+): NodeInfo[] {
   const foundNodeInfos: NodeInfo[] = [];
 
-  for (const node of traverseTree(tree)) {
-    // TODO: master replace hardcode for data in the config
-    if (node.type === 'interface_declaration') {
+  for (const node of traverseTree(tree, parent)) {
+    foundNodeInfos.push(...handleNode(referenceNodes, node));
+  }
+  return foundNodeInfos;
+}
+
+function handleNode(
+  referenceNodes: NodeTarget[],
+  node: SyntaxNode
+): NodeInfo[] {
+  const foundNodeInfos: NodeInfo[] = [];
+
+  referenceNodes.forEach((referenceNode) => {
+    if (node.type === referenceNode.type) {
+      const target = referenceNode.refType
+        ? findTargetNode(node, referenceNode.refType)
+        : node;
+      if (!target) {
+        return;
+      }
       const foundNode: NodeInfo = {
-        name: node.child(1).text,
+        name: target.text,
         type: node.type,
-        startPos: node.child(1).startPosition,
+        startPos: target.startPosition,
         children: [],
       };
 
-      for (const childrenNode of traverseTree(node.tree, node)) {
-        if (childrenNode.type === 'property_identifier') {
-          foundNode.children.push({
-            name: childrenNode.text,
-            type: childrenNode.type,
-            startPos: childrenNode.startPosition,
-          });
-        }
+      if (referenceNode.children) {
+        foundNode.children.push(
+          ...findNodes(referenceNode.children, node.tree, node)
+        );
       }
+
       foundNodeInfos.push(foundNode);
     }
-  }
+  });
+
   return foundNodeInfos;
+}
+
+function findTargetNode(
+  parentNode: SyntaxNode,
+  targetRef: string
+): SyntaxNode | undefined {
+  for (const node of traverseTree(parentNode.tree, parentNode)) {
+    if (node.type === targetRef) {
+      return node;
+    }
+  }
 }
 
 function* traverseTree(

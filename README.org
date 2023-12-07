@@ -41,12 +41,37 @@ For example
     "--tsProbeLocations",
     "./node_modules/typescript/lib"
   ],
+  "showPassed": false,
   "grammar": "typescript",
-  "projectRootPath": "./",
-  "analyzeDirectory": "./src",
+  "projectRootPath": "/Users/darkawower/projects/ui",
+  "analyzeDirectory": "/Users/darkawower/projects/ui/src",
   "fileMatchingRegexp": "**/*.ts",
+  "showProgress": true,
+  "encoding": "utf-8",
+  "referenceNodes": [
+    {
+      "type": "interface_declaration",
+      "refType": "type_identifier",
+      "children": [
+        {
+          "type": "property_identifier"
+        }
+      ]
+    },
+    {
+      "type": "class_declaration",
+      "refType": "type_identifier",
+      "children": [
+        {
+          "type": "public_field_definition",
+          "refType": "property_identifier"
+        },
+        {}
+      ]
+    }
+  ],
   "fileExcludeRegexps": ["**/*.spec.ts", "**/*.stories.ts"],
-  "contentMatchingRegexp": "interface",
+  "contentMatchingRegexp": "interface|class",
   "lspName": "angular-ls"
 }
 #+END_SRC

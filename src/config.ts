@@ -1,7 +1,15 @@
 import { readFileSync } from 'fs';
 import { Grammars } from './ts-analyzer.js';
 
+export interface NodeTarget {
+  type: string;
+  /* will be used as reference instead of node itself when specified */
+  refType?: string;
+  children?: NodeTarget[];
+}
+
 export interface SmellsCodeAnalyzerConfig {
+  showPassed?: boolean;
   projectRootPath: string;
   showProgress?: boolean;
   analyzeDirectory: string;
@@ -11,6 +19,7 @@ export interface SmellsCodeAnalyzerConfig {
   fileExcludeRegexps?: string[];
   contentMatchingRegexp?: string;
   lspCapabilities?: any;
+  referenceNodes: NodeTarget[];
   lspVersion: string;
   lspName: string;
   grammar: keyof typeof Grammars;
