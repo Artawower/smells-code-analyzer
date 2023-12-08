@@ -37,7 +37,7 @@ async function analyzeProject(config: SmellsCodeAnalyzerConfig): Promise<void> {
     }
     const filesInfo = await analyzeFile(config, lsp, filePath);
     analyzedNodes.push(...filesInfo);
-    const report = buildReport(filesInfo, true);
+    const report = buildReport(filesInfo, config.showPassed);
     if (report?.length) {
       console.log(report);
     }
