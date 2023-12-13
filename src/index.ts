@@ -44,8 +44,27 @@ async function analyzeProject(config: SmellsCodeAnalyzerConfig): Promise<void> {
     i++;
   }
 
+  const deadEntities = findDeadEntities(analyzedNodes);
+  console.log(`Found ${deadEntities.length} dead entities`);
+  if (config.threshold && deadEntities.length > config.threshold) {
+    throw new Error(
+      `Found ${deadEntities.length} dead entities, threshold is ${config.threshold}`
+    );
+  }
+
   lsp.shutdown();
   lsp.exit();
+}
+
+function findDeadEntities(nodes: FullNodeInfo[]): FullNodeInfo[] {
+  const deadEntities: FullNodeInfo[] = [];
+  for (const node of nodes) {
+    if (node.references === 0) {
+      deadEntities.push(node);
+    }
+    deadEntities.push(...findDeadEntities(node.children));
+  }
+  return deadEntities;
 }
 
 async function analyzeFile(
@@ -132,6 +151,7 @@ async function analyzeCodeBlock(
 (async (): Promise<void> => {
   const program = new Command();
   program.option('-c, --config-file <path>', 'Path for config file');
+  program.option('-t, --threshold <value>', 'Max amount of dead code entities');
 
   program.parse(process.argv);
 
@@ -142,7 +162,7 @@ async function analyzeCodeBlock(
 
   const startTime = performance.now();
   console.log(`✎: [index.ts][${new Date().toString()}] start analyze`);
-  const config = readConfig(options.configFile);
+  const config = readConfig(options.configFile, options.threshold);
   await analyzeProject(config);
   const endTime = performance.now();
   console.log(`Analyze took ${(endTime - startTime) / 1000} s`);

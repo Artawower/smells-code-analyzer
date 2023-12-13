@@ -11,6 +11,8 @@ export interface NodeTarget {
 export interface SmellsCodeAnalyzerConfig {
   showPassed?: boolean;
   projectRootPath: string;
+  /* Absolute value, when specified and amount of smells is greater than this value, then exit code will be 1 */
+  threshold?: number;
   showProgress?: boolean;
   analyzeDirectory: string;
   lspExecutable: string;
@@ -26,7 +28,10 @@ export interface SmellsCodeAnalyzerConfig {
   encoding: BufferEncoding;
 }
 
-export function readConfig(configPath?: string): SmellsCodeAnalyzerConfig {
+export function readConfig(
+  configPath?: string,
+  threshold?: number
+): SmellsCodeAnalyzerConfig {
   const config = JSON.parse(
     readFileSync(configPath).toString()
   ) as SmellsCodeAnalyzerConfig;
@@ -51,6 +56,7 @@ export function readConfig(configPath?: string): SmellsCodeAnalyzerConfig {
     // contentMatchingRegexp: 'interface',
     encoding: 'ascii',
     lspVersion: '0.0.2',
+    threshold: config.threshold || threshold,
     // lspName: 'angular-ls',
     // lspName: 'typescript',
     lspCapabilities: {
