@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "CLI tool powered by LSP and tree-sitter for finding dead and smells code from your project",
   "main": "dist/index.js",
-  "files": ["dist/**"],
+  "files": [
+    "dist/**"
+  ],
   "type": "module",
   "bin": {
     "sca": "dist/index.js"
@@ -15,13 +17,18 @@
     "dev": "ts-node --esm ./src/index.ts",
     "build": "tsc --project tsconfig.json && chmod +x ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Artawower/smells-code-analyzer.git"
   },
-  "keywords": ["cli", "code-analyzer", "tree-sitter", "lsp"],
+  "keywords": [
+    "cli",
+    "code-analyzer",
+    "tree-sitter",
+    "lsp"
+  ],
   "author": "darkawower <artawower@protonmail.com> (https://du-blog.ru/)",
   "license": "MIT",
   "bugs": {
@@ -29,20 +36,18 @@
   },
   "homepage": "https://github.com/Artawower/smells-code-analyzer#readme",
   "devDependencies": {
-    "@types/node": "20.10.3",
-    "ts-node": "10.9.1",
-    "tslib": "2.6.2",
+    "@types/node": "24.7.2",
+    "ts-node": "10.9.2",
+    "tslib": "2.8.1",
     "tsm": "2.3.0",
-    "typescript": "5.3.2"
+    "typescript": "5.9.3"
   },
   "dependencies": {
-    "@vscode/ripgrep": "1.15.9",
-    "commander": "11.1.0",
-    "ripgrep-node": "1.0.0",
-    "ripgrep-wrapper": "1.1.1",
-    "tree-sitter": "0.20.6",
-    "tree-sitter-typescript": "0.20.3",
-    "ts-lsp-client": "1.0.1",
-    "walk-sync": "3.0.0"
+    "@vscode/ripgrep": "1.15.14",
+    "commander": "14.0.1",
+    "tree-sitter": "0.25.0",
+    "tree-sitter-typescript": "0.23.2",
+    "ts-lsp-client": "1.1.0",
+    "walk-sync": "4.0.1"
   }
 }
