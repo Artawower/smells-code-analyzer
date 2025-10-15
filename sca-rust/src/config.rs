@@ -181,8 +181,8 @@ pub fn load_config(path: &Path, threshold_override: Option<usize>) -> Result<App
         .map(Path::to_path_buf)
         .unwrap_or_else(|| PathBuf::from("."));
 
-    let project_root_path = absolutize(config_dir.clone(), project_root_path);
-    let analyze_directory = absolutize(config_dir, analyze_directory);
+    let project_root_path = absolutize(&config_dir, project_root_path);
+    let analyze_directory = absolutize(&config_dir, analyze_directory);
 
     let grammar = Grammar::from_str(&grammar)?;
     let encoding_label = encoding;
@@ -225,12 +225,13 @@ pub fn load_config(path: &Path, threshold_override: Option<usize>) -> Result<App
     })
 }
 
-fn absolutize(base: PathBuf, value: PathBuf) -> PathBuf {
-    if value.is_absolute() {
+fn absolutize(base: &Path, value: PathBuf) -> PathBuf {
+    let joined = if value.is_absolute() {
         value
     } else {
         base.join(value)
-    }
+    };
+    fs::canonicalize(&joined).unwrap_or(joined)
 }
 
 fn resolve_encoding(label: &str) -> Result<&'static Encoding> {
