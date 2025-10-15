@@ -1,0 +1,1043 @@
+✎: [index.ts][Wed Dec 06 2023 00:49:41 GMT+0400 (GMT+04:00)] start analyze
+Analyze [1/398] /Users/darkawower/projects/ui/src/app/store/projects-store/projects.state.ts
+
+Analyze [2/398] /Users/darkawower/projects/ui/src/app/store/search-in-report-files/search-in-report-files.state.ts
+
+Analyze [3/398] /Users/darkawower/projects/ui/src/environments/environment.type.ts
+
+Analyze [4/398] /Users/darkawower/projects/ui/src/app/shared/components/source-target-patterns/source-target-patterns.component.ts
+
+Analyze [5/398] /Users/darkawower/projects/ui/src/app/store/organizations-store/organizations.state.ts
+
+Analyze [6/398] /Users/darkawower/projects/ui/src/app/store/qi-ignore-suggestion-store/qi-ignore-suggestion.state.ts
+
+Analyze [7/398] /Users/darkawower/projects/ui/src/app/shared/components/motivation/motivator.model.ts
+
+Analyze [8/398] /Users/darkawower/projects/ui/src/app/shared/components/specific-language/specific-language.component.ts
+
+Analyze [9/398] /Users/darkawower/projects/ui/src/app/store/consistency-subgroup-transaction-store/consistency-transaction.state.ts
+
+Analyze [10/398] /Users/darkawower/projects/ui/src/app/shared/components/motivation/motivation.state.ts
+
+Analyze [11/398] /Users/darkawower/projects/ui/src/app/shared/components/icon/icon.model.ts
+
+Analyze [12/398] /Users/darkawower/projects/ui/src/app/shared/components/suggestions/suggestions.component.ts
+
+Analyze [13/398] /Users/darkawower/projects/ui/src/app/shared/components/localization-platforms/models/lp-auth-component-params.ts
+
+Analyze [14/398] /Users/darkawower/projects/ui/src/app/shared/components/localization-platforms/models/lp-auth-form-field.ts
+
+Analyze [15/398] /Users/darkawower/projects/ui/src/app/shared/components/localization-platforms/models/lp-choose-files-component-params.ts
+
+Analyze [16/398] /Users/darkawower/projects/ui/src/app/shared/components/localization-platforms/constants/lp-assets.ts
+
+Analyze [17/398] /Users/darkawower/projects/ui/src/app/shared/components/search-input/search-input.component.ts
+
+Analyze [18/398] /Users/darkawower/projects/ui/src/app/shared/components/grid-filters/list-filter/list-filter.component.ts
+
+Analyze [19/398] /Users/darkawower/projects/ui/src/app/shared/components/context-viewer/context-viewer.component.ts
+
+Analyze [20/398] /Users/darkawower/projects/ui/src/app/shared/components/context-viewer/context-viewer.columns.ts
+
+Analyze [21/398] /Users/darkawower/projects/ui/src/app/shared/components/context-viewer/context-viewer-event.ts
+
+Analyze [22/398] /Users/darkawower/projects/ui/src/app/shared/components/measurement-units/models/measurement-units.models.ts
+
+Analyze [23/398] /Users/darkawower/projects/ui/src/app/shared/components/glossary-mapping/glossary-mapping.component.ts
+
+Analyze [24/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/segment-helper.service.ts
+
+Analyze [25/398] /Users/darkawower/projects/ui/src/app/shared/components/popover/popover-anchoring.service.ts
+
+Analyze [26/398] /Users/darkawower/projects/ui/src/app/shared/components/popover/types.ts
+
+Analyze [27/398] /Users/darkawower/projects/ui/src/app/shared/components/chip-list/chip-list-base.component.ts
+
+Analyze [28/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/tag-sharing-room.service.ts
+
+Analyze [29/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/editor-helper.service.ts
+
+Analyze [30/398] /Users/darkawower/projects/ui/src/app/shared/components/special-symbols/special-symbols.ts
+
+Analyze [31/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/models/selected-segment.ts
+
+Analyze [32/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/models/part-of-segment.ts
+
+Analyze [33/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/models/tag-marker-additional-info.ts
+
+Analyze [34/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/models/tag-with-status.ts
+
+Analyze [35/398] /Users/darkawower/projects/ui/src/app/shared/components/digit-to-text/models/digit-to-text.models.ts
+
+Analyze [36/398] /Users/darkawower/projects/ui/src/app/shared/components/segment-editor/models/copied-tag.ts
+
+Analyze [37/398] /Users/darkawower/projects/ui/src/app/shared/components/search-pattern/search-pattern.component.ts
+
+Analyze [38/398] /Users/darkawower/projects/ui/src/app/shared/components/content-tree-renderer/content-tree-renderer.component.ts
+
+Analyze [39/398] /Users/darkawower/projects/ui/src/app/shared/components/search-mode-select/search-mode-select.component.ts
+
+Analyze [40/398] /Users/darkawower/projects/ui/src/app/shared/components/notification/notificaiton.service.ts
+
+Analyze [41/398] /Users/darkawower/projects/ui/src/app/shared/components/wordforms/wordforms/wordforms-dialog/wordforms-dialog.component.ts
+
+Analyze [42/398] /Users/darkawower/projects/ui/src/app/shared/components/grid-components/cell-renderers/searched-cell-renderer.component.ts
+
+Analyze [43/398] /Users/darkawower/projects/ui/src/app/shared/components/grid-components/cell-renderers/grid-segment-cell-renderer.component.ts
+
+Analyze [44/398] /Users/darkawower/projects/ui/src/app/shared/components/grid-components/cell-renderers/grid-segment-cell-renderer.misc.ts
+
+Analyze [45/398] /Users/darkawower/projects/ui/src/app/shared/components/grid-components/segment-cell-editor/segment-cell-editor.component.ts
+
+Analyze [46/398] /Users/darkawower/projects/ui/src/app/shared/components/search-list/search-list.component.ts
+
+Analyze [47/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/tooltip.component.ts
+
+Analyze [48/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/interfaces.ts
+
+Analyze [49/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/index.ts
+
+Analyze [50/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/default-properties.ts
+
+Analyze [51/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/tooltip.module.ts
+
+Analyze [52/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/base-tooltip-trigger.ts
+
+Analyze [53/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/tooltip.service.ts
+
+Analyze [54/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/overlay/interfaces.ts
+
+Analyze [55/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/overlay/overlay.service.ts
+
+Analyze [56/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/overlay/overlay-container.component.ts
+
+Analyze [57/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/tooltip-trigger.directive.ts
+
+Analyze [58/398] /Users/darkawower/projects/ui/src/app/shared/components/tooltip/tooltip-properties.service.ts
+
+Analyze [59/398] /Users/darkawower/projects/ui/src/app/shared/components/grid-components/cell-edtiors/list-cell-editor/list-cell-editor.component.ts
+
+Analyze [60/398] /Users/darkawower/projects/ui/src/app/shared/components/project-invite/project-invite.component.ts
+
+Analyze [61/398] /Users/darkawower/projects/ui/src/app/shared/components/radio-button/models/radio-item.model.ts
+
+Analyze [62/398] /Users/darkawower/projects/ui/src/app/shared/components/dropdown/models/dropdown-item.model.ts
+
+Analyze [63/398] /Users/darkawower/projects/ui/src/app/shared/tools/grid-cell-renderer.ts
+
+Analyze [64/398] /Users/darkawower/projects/ui/src/app/shared/components/grid-components/cell-edtiors/simple-cell-editor/simple-cell-editor.component.ts
+
+Analyze [65/398] /Users/darkawower/projects/ui/src/app/store/translation-unit-changes-store/translation-unit-changes.state.ts
+
+Analyze [66/398] /Users/darkawower/projects/ui/src/app/store/language-store/language.state.model.ts
+
+Analyze [67/398] /Users/darkawower/projects/ui/src/app/store/report-processing-store/report-processing.state.ts
+
+Analyze [68/398] /Users/darkawower/projects/ui/src/app/store/potential-untranslatables/potential-untranslatables.state.ts
+
+Analyze [69/398] /Users/darkawower/projects/ui/src/app/store/uploading-files/uploading-files-state.ts
+
+Analyze [70/398] /Users/darkawower/projects/ui/src/app/store/payment-usage-log-store/payment-usage-log.state.ts
+
+Analyze [71/398] /Users/darkawower/projects/ui/src/app/shared/components/sidebar/sidebar.service.ts
+
+Analyze [72/398] /Users/darkawower/projects/ui/src/app/store/common-report-view-store/common-report-view.state.ts
+
+Analyze [73/398] /Users/darkawower/projects/ui/src/app/store/locale-qa-settings-store/locale-qa-settings.state.ts
+
+Analyze [74/398] /Users/darkawower/projects/ui/src/app/store/wordforms-store/wordforms.state.ts
+
+Analyze [75/398] /Users/darkawower/projects/ui/src/app/store/report-grids-store/report-grids-state.model.ts
+
+Analyze [76/398] /Users/darkawower/projects/ui/src/app/store/references/reference.state.ts
+
+Analyze [77/398] /Users/darkawower/projects/ui/src/app/store/auth/auth.state.ts
+
+Analyze [78/398] /Users/darkawower/projects/ui/src/app/store/plugins/order-ngxs-plugins/ngxs-plugin-with-order.ts
+
+Analyze [79/398] /Users/darkawower/projects/ui/src/app/store/project-store/project.state.ts
+
+Analyze [80/398] /Users/darkawower/projects/ui/src/app/store/localization-platforms-store/localization-platforms.state.ts
+
+Analyze [81/398] /Users/darkawower/projects/ui/src/app/store/plugins/async-storage-plugin/symbols.ts
+
+Analyze [82/398] /Users/darkawower/projects/ui/src/app/store/report-view-store/report-view.state.ts
+
+Analyze [83/398] /Users/darkawower/projects/ui/src/app/store/plugins/async-storage-plugin/async-engine.ts
+
+Analyze [84/398] /Users/darkawower/projects/ui/src/app/store/projects-collaborators/projects-collaborators.state.ts
+
+Analyze [85/398] /Users/darkawower/projects/ui/src/app/store/translation-units-store/translation-units.state.ts
+
+Analyze [86/398] /Users/darkawower/projects/ui/src/app/store/comments/comments-state.ts
+
+Analyze [87/398] /Users/darkawower/projects/ui/src/app/store/qa-settings-store/qa-settings.state.ts
+
+Analyze [88/398] /Users/darkawower/projects/ui/src/app/store/wordforms-base-store/wordforms-base.state.ts
+
+Analyze [89/398] /Users/darkawower/projects/ui/src/app/store/payment-store/payment.state.ts
+
+Analyze [90/398] /Users/darkawower/projects/ui/src/app/store/spell-check-store/spell-check.state.ts
+
+Analyze [91/398] /Users/darkawower/projects/ui/src/app/shared/extentions/string.extentions.ts
+
+Analyze [92/398] /Users/darkawower/projects/ui/src/app/store/projects-pins/projects-pin.state.ts
+
+Analyze [93/398] /Users/darkawower/projects/ui/src/app/shared/services/grid-helper.service.ts
+
+Analyze [94/398] /Users/darkawower/projects/ui/src/app/shared/onbording/onboarding.state.ts
+
+Analyze [95/398] /Users/darkawower/projects/ui/src/app/shared/services/app.service.ts
+[💩] AppConfigs
+	[💩] reportNamePrefix
+	[💩] settingsNamePrefix
+
+--------------------------------------------------------------------------------
+
+Analyze [96/398] /Users/darkawower/projects/ui/src/app/shared/services/file.service.ts
+
+Analyze [97/398] /Users/darkawower/projects/ui/src/app/shared/services/localStorage.service.ts
+
+Analyze [98/398] /Users/darkawower/projects/ui/src/app/store/special-symbols-store/special-symbols.state.ts
+
+Analyze [99/398] /Users/darkawower/projects/ui/src/app/shared/models/api-errors.model.ts
+
+Analyze [100/398] /Users/darkawower/projects/ui/src/app/shared/models/grid/searchable-grid-contenxt.model.ts
+
+Analyze [101/398] /Users/darkawower/projects/ui/src/app/shared/models/grid/online-grid-context.model.ts
+
+Analyze [102/398] /Users/darkawower/projects/ui/src/app/shared/models/routes/route.model.ts
+
+Analyze [103/398] /Users/darkawower/projects/ui/src/app/shared/models/export/report-export-filter-params.ts
+[💩] ReportExportFilterParams
+	[💩] field
+	[💩] type
+	[💩] value
+
+--------------------------------------------------------------------------------
+
+Analyze [104/398] /Users/darkawower/projects/ui/src/app/shared/models/file/file-upload-state.model.ts
+
+Analyze [105/398] /Users/darkawower/projects/ui/src/app/shared/models/file/files-upload.model.ts
+
+Analyze [106/398] /Users/darkawower/projects/ui/src/app/shared/models/file/translation-unit-properties.model.ts
+
+Analyze [107/398] /Users/darkawower/projects/ui/src/app/shared/models/file/file-upload-transfer.model.ts
+
+Analyze [108/398] /Users/darkawower/projects/ui/src/app/shared/models/file/translation-unit.model.ts
+
+Analyze [109/398] /Users/darkawower/projects/ui/src/app/shared/models/file/file-item.model.ts
+[💩] FileItem
+	[💩] name
+	[💩] ext
+	[💩] id
+	[💩] isProtected
+
+--------------------------------------------------------------------------------
+
+Analyze [110/398] /Users/darkawower/projects/ui/src/app/shared/models/translation-unit-change/translation-unit-change.model.ts
+
+Analyze [111/398] /Users/darkawower/projects/ui/src/app/shared/models/user/account.model.ts
+
+Analyze [112/398] /Users/darkawower/projects/ui/src/app/shared/models/common-hub/hub-action.model.ts
+
+Analyze [113/398] /Users/darkawower/projects/ui/src/app/shared/models/search-in-report-files/raw-search-in-report-files-result-item.model.ts
+
+Analyze [114/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-blacklist.model.ts
+
+Analyze [115/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-unit.model.ts
+
+Analyze [116/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-terminology-settings.model.ts
+
+Analyze [117/398] /Users/darkawower/projects/ui/src/app/shared/models/project/project-state.model.ts
+[💩] ProjectState
+	[💩] needUpdate
+	[💩] needSave
+	[💩] hashLocal
+	[💩] hashRemote
+
+--------------------------------------------------------------------------------
+
+Analyze [118/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-formal.model.ts
+
+Analyze [119/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-custom.model.ts
+
+Analyze [120/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-culture-numbers.model.ts
+
+Analyze [121/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-untranslatables.model.ts
+
+Analyze [122/398] /Users/darkawower/projects/ui/src/app/shared/models/project/requests/create-project-request.model.ts
+[💩] CreateProjectRequest
+	[💩] name
+
+--------------------------------------------------------------------------------
+
+Analyze [123/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-consistency-sub-settings.model.ts
+
+Analyze [124/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-omissions.model.ts
+
+Analyze [125/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-spelling-grammar.model.ts
+
+Analyze [126/398] /Users/darkawower/projects/ui/src/app/shared/models/project/project-info.model.ts
+
+Analyze [127/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/search-options.model.ts
+
+Analyze [128/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-culture-alphabet.model.ts
+
+Analyze [129/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-culture-measurements.model.ts
+
+Analyze [130/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-filter-settings.model.ts
+
+Analyze [131/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-measurements.model.ts
+
+Analyze [132/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-punctuations.model.ts
+
+Analyze [133/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-consistency.model.ts
+
+Analyze [134/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-terminology.model.ts
+
+Analyze [135/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-culture-special-signs.model.ts
+
+Analyze [136/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-culture-punctuations.model.ts
+
+Analyze [137/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-letter-case.model.ts
+
+Analyze [138/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-references.model.ts
+[💩] UnicodeBlock
+	[💩] name
+	[💩] endRange
+	[💩] startRange
+
+--------------------------------------------------------------------------------
+
+Analyze [139/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-miscellaneous.model.ts
+
+Analyze [140/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-numbers.model.ts
+
+Analyze [141/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/locale-check-settings.model.ts
+
+Analyze [142/398] /Users/darkawower/projects/ui/src/app/shared/models/report/report-context-viewer-payload.model.ts
+
+Analyze [143/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-quotes-apostrophes.model.ts
+
+Analyze [144/398] /Users/darkawower/projects/ui/src/app/shared/models/report/report-grid-filter.model.ts
+
+Analyze [145/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-tags.model.ts
+
+Analyze [146/398] /Users/darkawower/projects/ui/src/app/shared/models/report/quality-issue.model.ts
+
+Analyze [147/398] /Users/darkawower/projects/ui/src/app/shared/models/report/render-item.model.ts
+
+Analyze [148/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/qa-settings.model.ts
+
+Analyze [149/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/check-settings.model.ts
+[💩] CheckSettings
+	[💩] formal
+	[💩] terminology
+	[💩] customEntries
+	[💩] spelling
+	[💩] consistency
+	[💩] filteringSettings
+	[💩] protection
+
+--------------------------------------------------------------------------------
+
+Analyze [150/398] /Users/darkawower/projects/ui/src/app/shared/models/language/language-specifics.model.ts
+[💩] LanguageSpecifics
+	[💩] source
+	[💩] target
+	[💩] temporarySource
+	[💩] temporaryTarget
+
+--------------------------------------------------------------------------------
+
+Analyze [151/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-localized-unit.model.ts
+
+Analyze [152/398] /Users/darkawower/projects/ui/src/app/shared/models/language/language-change.model.ts
+[💩] LanguageChange
+	[💩] section
+	[💩] source
+	[💩] target
+
+--------------------------------------------------------------------------------
+
+Analyze [153/398] /Users/darkawower/projects/ui/src/app/shared/models/search-in-report-files/translation-unit-update.model.ts
+
+Analyze [154/398] /Users/darkawower/projects/ui/src/app/shared/models/selection-range.model.ts
+
+Analyze [155/398] /Users/darkawower/projects/ui/src/app/shared/models/language/languages.model.ts
+
+Analyze [156/398] /Users/darkawower/projects/ui/src/app/shared/models/facade/change-project-files-protection-request.model.ts
+[💩] ChangeProjectFilesProtectionRequest
+	[💩] ids
+	[💩] isProtected
+
+--------------------------------------------------------------------------------
+
+Analyze [157/398] /Users/darkawower/projects/ui/src/app/shared/models/facade/create-locale-qa-settings-request.model.ts
+[💩] CreateLocaleQASettingsRequest
+	[💩] qaSettingsId
+	[💩] languageCode
+	[💩] localeCheckSettings
+
+--------------------------------------------------------------------------------
+
+Analyze [158/398] /Users/darkawower/projects/ui/src/app/shared/models/facade/facade-change-project-files-languages.model.ts
+[💩] FacadeChangeProjectFilesLanguages
+	[💩] filesIds
+	[💩] sourceLanguageId
+	[💩] targetLanguageId
+
+--------------------------------------------------------------------------------
+
+Analyze [159/398] /Users/darkawower/projects/ui/src/app/shared/models/facade/delete-project-files-request.model.ts
+[💩] DeleteProjectFilesRequest
+	[💩] fileIds
+
+--------------------------------------------------------------------------------
+
+Analyze [160/398] /Users/darkawower/projects/ui/src/app/shared/models/profile/profile-culture-digits-to-text.model.ts
+
+Analyze [161/398] /Users/darkawower/projects/ui/src/app/shared/models/app/tuple.ts
+
+Analyze [162/398] /Users/darkawower/projects/ui/src/app/shared/models/localization-platforms/localization-platforms-project.model.ts
+
+Analyze [163/398] /Users/darkawower/projects/ui/src/app/shared/models/app/nav-item.model.ts
+
+Analyze [164/398] /Users/darkawower/projects/ui/src/app/shared/models/app/hash-index.model.ts
+[💩] HashIndex
+--------------------------------------------------------------------------------
+
+Analyze [165/398] /Users/darkawower/projects/ui/src/app/shared/models/app/update-event.model.ts
+[💩] UpdateEvent
+	[💩] project
+	[💩] projects
+	[💩] profile
+	[💩] profiles
+	[💩] account
+	[💩] auth
+	[💩] refreshToken
+	[💩] window
+	[💩] storage
+	[💩] api
+	[💩] key
+	[💩] uid
+	[💩] value
+	[💩] emitter
+	[💩] type
+
+--------------------------------------------------------------------------------
+
+Analyze [166/398] /Users/darkawower/projects/ui/src/app/shared/models/network/pagination.model.ts
+
+Analyze [167/398] /Users/darkawower/projects/ui/src/app/shared/models/terms/update-wordforms-base-request.model.ts
+[💩] UpdateWordformsBaseRequest
+	[💩] name
+
+--------------------------------------------------------------------------------
+
+Analyze [168/398] /Users/darkawower/projects/ui/src/app/shared/models/app/datasource-reponse.model.ts
+[💩] DataSourceResponse
+	[💩] data
+	[💩] total
+
+--------------------------------------------------------------------------------
+
+Analyze [169/398] /Users/darkawower/projects/ui/src/app/shared/models/terms/create-wordforms-base-request.model.ts
+[💩] CreateWordformsBaseRequest
+	[💩] name
+
+--------------------------------------------------------------------------------
+
+Analyze [170/398] /Users/darkawower/projects/ui/src/app/shared/models/terms/term.model.ts
+[💩] TermSettings
+	[💩] isCaseSensitive
+	[💩] wholeWord
+
+--------------------------------------------------------------------------------
+
+Analyze [171/398] /Users/darkawower/projects/ui/src/app/shared/models/search-in-report-files/search-in-report-files-result-item.model.ts
+
+Analyze [172/398] /Users/darkawower/projects/ui/src/app/shared/models/terms/import-glossary-request.model.ts
+[💩] ImportGlossaryRequest
+	[💩] qASettingsId
+	[💩] fileId
+	[💩] termbaseName
+	[💩] glossaryFileName
+	[💩] skipFirstRow
+	[💩] mapping
+
+--------------------------------------------------------------------------------
+
+Analyze [173/398] /Users/darkawower/projects/ui/src/app/shared/models/comments/comment-thread-additional-data.ts
+
+Analyze [174/398] /Users/darkawower/projects/ui/src/app/shared/models/comments/comment-create.model.ts
+
+Analyze [175/398] /Users/darkawower/projects/ui/src/app/shared/models/terms/suggestion.model.ts
+
+Analyze [176/398] /Users/darkawower/projects/ui/src/app/shared/models/language/language-pair.model.ts
+[💩] LanguagePair
+	[💩] source
+	[💩] target
+
+--------------------------------------------------------------------------------
+
+Analyze [177/398] /Users/darkawower/projects/ui/src/app/shared/models/terms/suggested-word-form.model.ts
+
+Analyze [178/398] /Users/darkawower/projects/ui/src/app/shared/models/comments/comment-thread.ts
+
+Analyze [179/398] /Users/darkawower/projects/ui/src/app/shared/directives/context-menu.service.ts
+
+Analyze [180/398] /Users/darkawower/projects/ui/src/app/shared/directives/disable-control/disable-control.directive.spec.ts
+
+Analyze [181/398] /Users/darkawower/projects/ui/src/app/shared/layout/header/header-projects/header-projects.component.ts
+
+Analyze [182/398] /Users/darkawower/projects/ui/src/app/report/components/footer-source-target/footer-source-target.component.ts
+
+Analyze [183/398] /Users/darkawower/projects/ui/src/app/report/modules/export/configs/report-export-fields.ts
+
+Analyze [184/398] /Users/darkawower/projects/ui/src/app/report/models/grid-context.model.ts
+
+Analyze [185/398] /Users/darkawower/projects/ui/src/app/report/components/report-grid/components/child-counted-row-group-renderer/child-counted-row-group-renderer.component.ts
+
+Analyze [186/398] /Users/darkawower/projects/ui/src/workers/file-uploader.worker.ts
+
+Analyze [187/398] /Users/darkawower/projects/ui/src/app/report/modules/translation-unit-changes/containers/translation-unit-changes-container/translation-unit-changes-container.component.ts
+
+Analyze [188/398] /Users/darkawower/projects/ui/src/app/config/app.config.ts
+
+Analyze [189/398] /Users/darkawower/projects/ui/src/types/ag-grid.ts
+[💩] RowSelectedEvent
+	[💩] colId
+	[💩] context
+	[💩] contextParams
+	[💩] providedBeanInstances
+	[💩] gridOptions
+	[💩] detailNode
+	[💩] sibling
+	[💩] context
+	[💩] setData
+	[💩] updateData
+	[💩] setDataAndId
+	[💩] depthFirstSearch
+	[💩] isParentOfNode
+	[💩] getFirstChildOfFirstChild
+	[💩] gridApi
+	[💩] node
+	[💩] rowIndex
+	[💩] rowPinned
+	[💩] data
+
+[💩] ValueSetterParams
+	[💩] colId
+	[💩] context
+	[💩] contextParams
+	[💩] providedBeanInstances
+	[💩] gridOptions
+	[💩] detailNode
+	[💩] sibling
+	[💩] context
+	[💩] setData
+	[💩] updateData
+	[💩] setDataAndId
+	[💩] depthFirstSearch
+	[💩] isParentOfNode
+	[💩] getFirstChildOfFirstChild
+	[💩] gridApi
+	[💩] node
+	[💩] rowIndex
+	[💩] rowPinned
+	[💩] data
+	[💩] node
+	[💩] getValue
+	[💩] node
+	[💩] column
+	[💩] colDef
+	[💩] api
+	[💩] context
+	[💩] oldValue
+	[💩] newValue
+	[💩] colDef
+	[💩] node
+	[💩] api
+	[💩] context
+	[💩] node
+	[💩] colDef
+	[💩] cellHeight
+	[💩] buttons
+	[💩] closeOnApply
+	[💩] newRowsAction
+	[💩] data
+	[💩] newValue
+
+[💩] RowHeightParams
+	[💩] colId
+	[💩] context
+	[💩] contextParams
+	[💩] providedBeanInstances
+	[💩] gridOptions
+	[💩] detailNode
+	[💩] sibling
+	[💩] context
+	[💩] setData
+	[💩] updateData
+	[💩] setDataAndId
+	[💩] depthFirstSearch
+	[💩] isParentOfNode
+	[💩] getFirstChildOfFirstChild
+	[💩] gridApi
+	[💩] node
+	[💩] rowIndex
+	[💩] rowPinned
+	[💩] data
+	[💩] node
+	[💩] getValue
+	[💩] node
+	[💩] column
+	[💩] colDef
+	[💩] api
+	[💩] context
+	[💩] oldValue
+	[💩] newValue
+	[💩] colDef
+	[💩] node
+	[💩] api
+	[💩] context
+	[💩] node
+	[💩] colDef
+	[💩] cellHeight
+	[💩] buttons
+	[💩] closeOnApply
+	[💩] newRowsAction
+	[💩] data
+	[💩] newValue
+	[💩] doesRowPassOtherFilter
+	[💩] rowModel
+
+--------------------------------------------------------------------------------
+
+Analyze [190/398] /Users/darkawower/projects/ui/src/app/settings/spelling/spelling.component.ts
+
+Analyze [191/398] /Users/darkawower/projects/ui/src/app/generated/api/request-builder.ts
+
+Analyze [192/398] /Users/darkawower/projects/ui/src/app/settings/common/miscellaneous/containers/miscellaneous-language-specific/miscellaneous-language-specific.component.ts
+
+Analyze [193/398] /Users/darkawower/projects/ui/src/app/generated/api/api-configuration.ts
+
+Analyze [194/398] /Users/darkawower/projects/ui/src/app/core/services/favicon.service.ts
+
+Analyze [195/398] /Users/darkawower/projects/ui/src/app/generated/icons/icons.model.ts
+
+Analyze [196/398] /Users/darkawower/projects/ui/src/app/generated/api/models/localization-platform-project-model.ts
+
+Analyze [197/398] /Users/darkawower/projects/ui/src/app/generated/api/models/qa-settings-info.ts
+
+Analyze [198/398] /Users/darkawower/projects/ui/src/app/generated/api/models/change-languages-request.ts
+
+Analyze [199/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-wordforms-base-request.ts
+
+Analyze [200/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-numbers.ts
+
+Analyze [201/398] /Users/darkawower/projects/ui/src/app/generated/api/models/comment-model.ts
+
+Analyze [202/398] /Users/darkawower/projects/ui/src/app/generated/api/models/translation-unit-change-model.ts
+
+Analyze [203/398] /Users/darkawower/projects/ui/src/app/generated/api/models/download-project-files-request.ts
+
+Analyze [204/398] /Users/darkawower/projects/ui/src/app/generated/api/models/unicode-block-model.ts
+
+Analyze [205/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-file-info.ts
+
+Analyze [206/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-comment-request.ts
+
+Analyze [207/398] /Users/darkawower/projects/ui/src/app/generated/api/models/word-form-model-data-source-response.ts
+
+Analyze [208/398] /Users/darkawower/projects/ui/src/app/generated/api/models/access-denied-exception.ts
+
+Analyze [209/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-miscellaneous.ts
+
+Analyze [210/398] /Users/darkawower/projects/ui/src/app/generated/api/models/custom-quality-issue-filter-rule.ts
+
+Analyze [211/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-miscellaneous-symbols.ts
+
+Analyze [212/398] /Users/darkawower/projects/ui/src/app/generated/api/models/numbers.ts
+
+Analyze [213/398] /Users/darkawower/projects/ui/src/app/generated/api/models/apply-segment-to-translation-units-request.ts
+
+Analyze [214/398] /Users/darkawower/projects/ui/src/app/generated/api/models/quotes-apostrophes.ts
+
+Analyze [215/398] /Users/darkawower/projects/ui/src/app/generated/api/models/rollback-tranlsation-unit-changes-request.ts
+
+Analyze [216/398] /Users/darkawower/projects/ui/src/app/generated/api/models/potential-untranslatable-item-data-source-response.ts
+
+Analyze [217/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-qa-settings-request.ts
+
+Analyze [218/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-collaborator-model.ts
+
+Analyze [219/398] /Users/darkawower/projects/ui/src/app/generated/api/models/search-result.ts
+
+Analyze [220/398] /Users/darkawower/projects/ui/src/app/core/guards/registered.guard.ts
+
+Analyze [221/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-qa-settings-template-request.ts
+
+Analyze [222/398] /Users/darkawower/projects/ui/src/app/generated/api/models/filter-settings.ts
+
+Analyze [223/398] /Users/darkawower/projects/ui/src/app/generated/api/models/term-model-data-source-response.ts
+
+Analyze [224/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/api-configuration.ts
+
+Analyze [225/398] /Users/darkawower/projects/ui/src/app/generated/api/models/term-settings.ts
+
+Analyze [226/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-digits-to-text.ts
+
+Analyze [227/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/request-builder.ts
+
+Analyze [228/398] /Users/darkawower/projects/ui/src/app/generated/api/models/quality-issue-kind.ts
+
+Analyze [229/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-measurements.ts
+
+Analyze [230/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-with-collaborators.ts
+
+Analyze [231/398] /Users/darkawower/projects/ui/src/app/generated/api/models/tags.ts
+
+Analyze [232/398] /Users/darkawower/projects/ui/src/app/generated/api/models/localized-unit.ts
+
+Analyze [233/398] /Users/darkawower/projects/ui/src/app/generated/api/models/fix-quality-issue-translation-unit-request.ts
+
+Analyze [234/398] /Users/darkawower/projects/ui/src/app/generated/api/models/localization-platform-info.ts
+
+Analyze [235/398] /Users/darkawower/projects/ui/src/app/generated/api/models/organization-with-user-roles.ts
+
+Analyze [236/398] /Users/darkawower/projects/ui/src/app/generated/api/models/glossary-import-configuration.ts
+
+Analyze [237/398] /Users/darkawower/projects/ui/src/app/generated/api/models/default-upload-glossary-result.ts
+
+Analyze [238/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-member.ts
+
+Analyze [239/398] /Users/darkawower/projects/ui/src/app/generated/api/models/quality-issue-model.ts
+
+Analyze [240/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/payment-method-details.ts
+
+Analyze [241/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/cancel-subscription-request.ts
+
+Analyze [242/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/plan-category-model.ts
+
+Analyze [243/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/build-checkout-request.ts
+
+Analyze [244/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/product-details.ts
+
+Analyze [245/398] /Users/darkawower/projects/ui/src/app/generated/api/models/clone-qa-settings-request.ts
+
+Analyze [246/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/order-model.ts
+
+Analyze [247/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/subscription-details.ts
+
+Analyze [248/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/outgoing-order-model.ts
+
+Analyze [249/398] /Users/darkawower/projects/ui/src/app/generated/api/models/rename-qa-settings-request.ts
+
+Analyze [250/398] /Users/darkawower/projects/ui/src/app/generated/api/models/spelling.ts
+
+Analyze [251/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-info.ts
+
+Analyze [252/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-sharing-invited-member.ts
+
+Analyze [253/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/product-model.ts
+
+Analyze [254/398] /Users/darkawower/projects/ui/src/app/generated/api/models/ignore-quality-issues-request.ts
+
+Analyze [255/398] /Users/darkawower/projects/ui/src/app/generated/api/models/generate-report-request.ts
+
+Analyze [256/398] /Users/darkawower/projects/ui/src/app/generated/api/models/attach-files-model.ts
+
+Analyze [257/398] /Users/darkawower/projects/ui/src/app/generated/api/models/migratable-check-settings.ts
+
+Analyze [258/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/build-checkout-response.ts
+
+Analyze [259/398] /Users/darkawower/projects/ui/src/app/generated/api/models/get-quality-issues-response-model.ts
+
+Analyze [260/398] /Users/darkawower/projects/ui/src/app/generated/api/models/search-options-model.ts
+
+Analyze [261/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/balance-model.ts
+
+Analyze [262/398] /Users/darkawower/projects/ui/src/app/generated/api/models/value-type.ts
+
+Analyze [263/398] /Users/darkawower/projects/ui/src/app/generated/api/models/translation-unit-properties.ts
+
+Analyze [264/398] /Users/darkawower/projects/ui/src/app/generated/api/models/letter-case.ts
+
+Analyze [265/398] /Users/darkawower/projects/ui/src/app/generated/api/models/change-project-settings-request.ts
+
+Analyze [266/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-project-collaborator-request.ts
+
+Analyze [267/398] /Users/darkawower/projects/ui/src/app/generated/payment-api/models/change-quantity-request.ts
+
+Analyze [268/398] /Users/darkawower/projects/ui/src/app/generated/api/models/check-settings-version.ts
+
+Analyze [269/398] /Users/darkawower/projects/ui/src/app/generated/api/models/report-not-found-exception.ts
+
+Analyze [270/398] /Users/darkawower/projects/ui/src/app/generated/api/models/potential-untranslatable-item.ts
+
+Analyze [271/398] /Users/darkawower/projects/ui/src/app/generated/api/models/punctuations.ts
+
+Analyze [272/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-and-recheck-translation-units-request.ts
+
+Analyze [273/398] /Users/darkawower/projects/ui/src/app/generated/api/models/accept-collaboration-invitation-result.ts
+
+Analyze [274/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-invite-request.ts
+
+Analyze [275/398] /Users/darkawower/projects/ui/src/app/generated/api/models/restore-comment-thread-request.ts
+
+Analyze [276/398] /Users/darkawower/projects/ui/src/app/generated/api/models/consistency.ts
+
+Analyze [277/398] /Users/darkawower/projects/ui/src/app/generated/api/models/untranslatables.ts
+
+Analyze [278/398] /Users/darkawower/projects/ui/src/app/generated/api/models/file-type-protection-settings.ts
+
+Analyze [279/398] /Users/darkawower/projects/ui/src/app/generated/api/models/delete-users-request.ts
+
+Analyze [280/398] /Users/darkawower/projects/ui/src/app/generated/api/models/consistency-sub-settings.ts
+
+Analyze [281/398] /Users/darkawower/projects/ui/src/app/generated/api/models/export-column-model.ts
+
+Analyze [282/398] /Users/darkawower/projects/ui/src/app/generated/api/models/invite-collaborators-request.ts
+
+Analyze [283/398] /Users/darkawower/projects/ui/src/app/generated/api/models/language-pair.ts
+
+Analyze [284/398] /Users/darkawower/projects/ui/src/app/generated/api/models/organization.ts
+
+Analyze [285/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-with-collaborators-data-source-response.ts
+
+Analyze [286/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-special-signs.ts
+
+Analyze [287/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-alphabet.ts
+
+Analyze [288/398] /Users/darkawower/projects/ui/src/app/generated/api/models/terminology-sub-settings.ts
+
+Analyze [289/398] /Users/darkawower/projects/ui/src/app/generated/api/models/operation.ts
+
+Analyze [290/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-project-request.ts
+
+Analyze [291/398] /Users/darkawower/projects/ui/src/app/generated/api/models/word-form-model.ts
+
+Analyze [292/398] /Users/darkawower/projects/ui/src/app/generated/api/models/comment-thread-additional-data.ts
+
+Analyze [293/398] /Users/darkawower/projects/ui/src/app/generated/api/models/formal.ts
+
+Analyze [294/398] /Users/darkawower/projects/ui/src/app/generated/api/models/report-export-parameter.ts
+
+Analyze [295/398] /Users/darkawower/projects/ui/src/app/generated/api/models/term-model.ts
+
+Analyze [296/398] /Users/darkawower/projects/ui/src/app/settings/common/untranslatables/components/untranslatables-context-viewer/untranslatables-context-viewer.component.ts
+
+Analyze [297/398] /Users/darkawower/projects/ui/src/app/generated/api/models/quality-issue-comment-model.ts
+
+Analyze [298/398] /Users/darkawower/projects/ui/src/app/generated/api/models/commit-project-file-request.ts
+
+Analyze [299/398] /Users/darkawower/projects/ui/src/app/generated/api/models/problem-details.ts
+
+Analyze [300/398] /Users/darkawower/projects/ui/src/app/generated/api/models/export-filter-model.ts
+
+Analyze [301/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-translation-unit-target-segment-request.ts
+
+Analyze [302/398] /Users/darkawower/projects/ui/src/app/generated/api/models/thread-with-comments-model.ts
+
+Analyze [303/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-term-request.ts
+
+Analyze [304/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-quotes-apostrophes.ts
+
+Analyze [305/398] /Users/darkawower/projects/ui/src/app/generated/api/models/default-upload-glossaries-result.ts
+
+Analyze [306/398] /Users/darkawower/projects/ui/src/app/generated/api/models/ignore-quality-issue-suggestion.ts
+
+Analyze [307/398] /Users/darkawower/projects/ui/src/app/generated/api/models/copy-qa-settings-request.ts
+
+Analyze [308/398] /Users/darkawower/projects/ui/src/app/generated/api/models/qa-settings-model.ts
+
+Analyze [309/398] /Users/darkawower/projects/ui/src/app/generated/api/models/language-model.ts
+
+Analyze [310/398] /Users/darkawower/projects/ui/src/app/generated/api/models/user-with-organizations.ts
+
+Analyze [311/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-wordforms-base-request.ts
+
+Analyze [312/398] /Users/darkawower/projects/ui/src/app/generated/api/models/report-model.ts
+
+Analyze [313/398] /Users/darkawower/projects/ui/src/app/generated/api/models/delete-project-files-request.ts
+
+Analyze [314/398] /Users/darkawower/projects/ui/src/app/generated/api/models/export-glossary-request.ts
+
+Analyze [315/398] /Users/darkawower/projects/ui/src/app/generated/api/models/profile-reference-data-model.ts
+
+Analyze [316/398] /Users/darkawower/projects/ui/src/app/generated/api/models/ignore-quality-issue-model.ts
+
+Analyze [317/398] /Users/darkawower/projects/ui/src/app/generated/api/models/search-options.ts
+
+Analyze [318/398] /Users/darkawower/projects/ui/src/app/generated/api/models/wordforms-base-info.ts
+
+Analyze [319/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-translation-units-request.ts
+
+Analyze [320/398] /Users/darkawower/projects/ui/src/app/generated/api/models/unit.ts
+
+Analyze [321/398] /Users/darkawower/projects/ui/src/app/generated/api/models/apply-translation-units-request.ts
+
+Analyze [322/398] /Users/darkawower/projects/ui/src/app/generated/api/models/localization-platform-connection-model.ts
+
+Analyze [323/398] /Users/darkawower/projects/ui/src/app/generated/api/models/localization-platform-file-model.ts
+
+Analyze [324/398] /Users/darkawower/projects/ui/src/app/generated/api/models/character.ts
+
+Analyze [325/398] /Users/darkawower/projects/ui/src/app/generated/api/models/miscellaneous.ts
+
+Analyze [326/398] /Users/darkawower/projects/ui/src/app/generated/api/models/change-word-form-model.ts
+
+Analyze [327/398] /Users/darkawower/projects/ui/src/app/generated/api/models/project-file-load-failed-exception.ts
+
+Analyze [328/398] /Users/darkawower/projects/ui/src/app/generated/api/models/translation-unit-target-segment.ts
+
+Analyze [329/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-termbase-request.ts
+
+Analyze [330/398] /Users/darkawower/projects/ui/src/app/generated/api/models/search-translation-units-request.ts
+
+Analyze [331/398] /Users/darkawower/projects/ui/src/app/generated/api/models/user-model.ts
+
+Analyze [332/398] /Users/darkawower/projects/ui/src/app/generated/api/models/guid-tenant-entity.ts
+
+Analyze [333/398] /Users/darkawower/projects/ui/src/app/generated/api/models/accept-collaboration-invitation-request.ts
+
+Analyze [334/398] /Users/darkawower/projects/ui/src/app/generated/api/models/issue-status-model.ts
+
+Analyze [335/398] /Users/darkawower/projects/ui/src/app/generated/api/models/omissions.ts
+
+Analyze [336/398] /Users/darkawower/projects/ui/src/app/generated/api/models/quality-issue-info.ts
+
+Analyze [337/398] /Users/darkawower/projects/ui/src/app/generated/api/models/tenant-project-multi-tenant-entity.ts
+
+Analyze [338/398] /Users/darkawower/projects/ui/src/app/generated/api/models/authentication-model.ts
+
+Analyze [339/398] /Users/darkawower/projects/ui/src/app/generated/api/models/translation-unit-model.ts
+
+Analyze [340/398] /Users/darkawower/projects/ui/src/app/generated/api/models/segment.ts
+
+Analyze [341/398] /Users/darkawower/projects/ui/src/app/generated/api/models/connect-to-socket-project-group-request.ts
+
+Analyze [342/398] /Users/darkawower/projects/ui/src/app/generated/api/models/custom-quality-issue-filter-entry.ts
+
+Analyze [343/398] /Users/darkawower/projects/ui/src/app/generated/api/models/resolve-comment-thread-request.ts
+
+Analyze [344/398] /Users/darkawower/projects/ui/src/app/generated/api/models/wordforms-base-info-data-source-response.ts
+
+Analyze [345/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-report-command.ts
+
+Analyze [346/398] /Users/darkawower/projects/ui/src/app/generated/api/models/u-int-64-tenant-entity.ts
+
+Analyze [347/398] /Users/darkawower/projects/ui/src/app/generated/api/models/base-error-data-model.ts
+
+Analyze [348/398] /Users/darkawower/projects/ui/src/app/generated/api/models/terminology.ts
+
+Analyze [349/398] /Users/darkawower/projects/ui/src/app/generated/api/models/organization-user-model.ts
+
+Analyze [350/398] /Users/darkawower/projects/ui/src/app/generated/api/models/recheck-translation-unit-request.ts
+
+Analyze [351/398] /Users/darkawower/projects/ui/src/app/generated/api/models/blacklist.ts
+
+Analyze [352/398] /Users/darkawower/projects/ui/src/app/generated/api/models/get-ignore-suggestions-request.ts
+
+Analyze [353/398] /Users/darkawower/projects/ui/src/app/generated/api/models/report-export-model.ts
+
+Analyze [354/398] /Users/darkawower/projects/ui/src/app/generated/api/models/invited-member.ts
+
+Analyze [355/398] /Users/darkawower/projects/ui/src/app/generated/api/models/termbase-info.ts
+
+Analyze [356/398] /Users/darkawower/projects/ui/src/app/generated/api/models/comment-owner-model.ts
+
+Analyze [357/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-punctuations.ts
+
+Analyze [358/398] /Users/darkawower/projects/ui/src/app/generated/api/models/accept-invite-result.ts
+
+Analyze [359/398] /Users/darkawower/projects/ui/src/app/generated/api/models/upload-file-model.ts
+
+Analyze [360/398] /Users/darkawower/projects/ui/src/app/generated/api/models/guid-entity-base.ts
+
+Analyze [361/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-word-form-request.ts
+
+Analyze [362/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-word-form-request.ts
+
+Analyze [363/398] /Users/darkawower/projects/ui/src/app/generated/api/models/custom-entry.ts
+
+Analyze [364/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-project-request.ts
+
+Analyze [365/398] /Users/darkawower/projects/ui/src/app/generated/api/models/locale-qa-settings-model.ts
+
+Analyze [366/398] /Users/darkawower/projects/ui/src/app/generated/api/models/protection-settings.ts
+
+Analyze [367/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-term-request.ts
+
+Analyze [368/398] /Users/darkawower/projects/ui/src/app/generated/api/models/comment-quality-issues-command.ts
+
+Analyze [369/398] /Users/darkawower/projects/ui/src/app/generated/api/models/mapping-descriptor.ts
+
+Analyze [370/398] /Users/darkawower/projects/ui/src/app/generated/api/models/base-error-data.ts
+
+Analyze [371/398] /Users/darkawower/projects/ui/src/app/generated/api/models/target-language-mapping.ts
+
+Analyze [372/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-term-settings-request.ts
+
+Analyze [373/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-termbase-request.ts
+
+Analyze [374/398] /Users/darkawower/projects/ui/src/app/generated/api/models/measurements.ts
+
+Analyze [375/398] /Users/darkawower/projects/ui/src/app/generated/api/models/suggested-word-form.ts
+
+Analyze [376/398] /Users/darkawower/projects/ui/src/app/generated/api/models/localization-platform-model.ts
+
+Analyze [377/398] /Users/darkawower/projects/ui/src/app/generated/api/models/segment-element.ts
+
+Analyze [378/398] /Users/darkawower/projects/ui/src/app/generated/api/models/int-32-entity-base.ts
+
+Analyze [379/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-organization-request.ts
+
+Analyze [380/398] /Users/darkawower/projects/ui/src/app/generated/api/models/create-locale-qa-settings-request.ts
+
+Analyze [381/398] /Users/darkawower/projects/ui/src/app/generated/api/models/accept-invite-request.ts
+
+Analyze [382/398] /Users/darkawower/projects/ui/src/app/generated/api/models/update-comment-request.ts
+
+Analyze [383/398] /Users/darkawower/projects/ui/src/app/generated/api/models/change-project-files-protection-request.ts
+
+Analyze [384/398] /Users/darkawower/projects/ui/src/app/generated/api/models/change-term-model.ts
+
+Analyze [385/398] /Users/darkawower/projects/ui/src/app/core/services/shortcuts/shortcuts.service.ts
+
+Analyze [386/398] /Users/darkawower/projects/ui/src/app/core/services/register-guard.service.ts
+
+Analyze [387/398] /Users/darkawower/projects/ui/src/app/core/services/shortcuts/shortcuts.model.ts
+
+Analyze [388/398] /Users/darkawower/projects/ui/src/app/core/logger/log-appender.ts
+
+Analyze [389/398] /Users/darkawower/projects/ui/src/app/organization-detail/components/subscription-plan/subscription-plan.component.ts
+
+Analyze [390/398] /Users/darkawower/projects/ui/src/app/core/modules/auth/auth.service.ts
+
+Analyze [391/398] /Users/darkawower/projects/ui/src/app/settings/consistency/settings-items.constants.ts
+
+Analyze [392/398] /Users/darkawower/projects/ui/src/types/object.d.ts
+
+Analyze [393/398] /Users/darkawower/projects/ui/src/app/settings/protection/protection.component.ts
+
+Analyze [394/398] /Users/darkawower/projects/ui/src/app/settings/protection/protection-checkbox-list/protection-checkbox-list-item.model.ts
+
+Analyze [395/398] /Users/darkawower/projects/ui/src/app/settings/terminology/containers/terminology-settings/terminology-settings.component.ts
+
+Analyze [396/398] /Users/darkawower/projects/ui/src/app/settings/terminology/containers/terms-table/terms-table.component.ts
+
+Analyze [397/398] /Users/darkawower/projects/ui/src/app/settings/terminology/containers/terminology-language-specific/terminology-language-specific.component.ts
+[💩] Test
+	[💩] constructor
+	[💩] pep
+	[💩] a
+
+--------------------------------------------------------------------------------
+
+Analyze [398/398] /Users/darkawower/projects/ui/src/app/settings/terminology/containers/terms-table/cell-renderers/term-settings-header/term-settings-header.component.ts
+
+Analyze took 96.01315387487412 s

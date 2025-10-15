@@ -41,6 +41,14 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+sca-node/node_modules/
+
+# Rust outputs
+sca-rust/target/
+sca-rust/Cargo.lock
+*.rlib
+
+
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
