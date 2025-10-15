@@ -41,6 +41,12 @@ Override the threshold if needed:
 ./target/release/sca --config-file ../config.json --threshold 50
 ```
 
+If you want to analyse only a predefined set of files, pass a newline-separated list:
+```bash
+./target/release/sca --config-file ../config.json --files-from changed-files.txt
+```
+Paths can be absolute or relative to the list file; missing or excluded files are skipped automatically.
+
 Publishing instructions live in `sca-rust/README.md`.
 
 ### 🟠 Node.js (Deprecated)

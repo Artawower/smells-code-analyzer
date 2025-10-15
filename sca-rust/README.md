@@ -27,6 +27,12 @@ You can override the maximum number of allowed “dead” entities:
 ./target/release/sca --config-file ../config.json --threshold 50
 ```
 
+To analyse a specific set of files listed in `changed-files.txt` (newline separated paths), use:
+```bash
+./target/release/sca --config-file ../config.json --files-from changed-files.txt
+```
+Paths may be absolute or relative to the list file; entries outside the analysed directory or missing on disk are skipped.
+
 > **Note**  
 > The language server referenced in the config (e.g. `node .../typescript-language-server`)
 > must be accessible on the host machine before running the binary.

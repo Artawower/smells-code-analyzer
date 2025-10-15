@@ -8,7 +8,9 @@ use crate::analyzer::{count_dead_entities, Analyzer};
 use crate::config::load_config;
 use anyhow::{Context, Result};
 use clap::Parser;
-use std::path::PathBuf;
+use std::collections::HashSet;
+use std::fs;
+use std::path::{Path, PathBuf};
 use std::time::Instant;
 use tracing_subscriber::EnvFilter;
 
@@ -23,6 +25,10 @@ struct Cli {
     /// Override threshold value from configuration
     #[arg(short = 't', long = "threshold")]
     threshold: Option<usize>,
+
+    /// Path to a file containing newline separated file paths to analyse
+    #[arg(long = "files-from", value_name = "PATH")]
+    files_from: Option<PathBuf>,
 }
 
 #[tokio::main]
@@ -34,13 +40,21 @@ async fn main() -> Result<()> {
     let config = load_config(&cli.config_file, cli.threshold)
         .with_context(|| format!("Failed to load config {:?}", cli.config_file))?;
 
+    let only_files = if let Some(files_list) = cli.files_from {
+        Some(
+            load_target_file_set(&files_list)
+                .with_context(|| format!("Failed to read file list {}", files_list.display()))?,
+        )
+    } else {
+        None
+    };
+
     tracing::info!("Using configuration {}", config.summary());
 
-    let files_total = analyzer::files::count_files(&config)?;
-    println!("FILES TO ANALYZE: {}", files_total);
-
     let mut analyzer = Analyzer::new(&config).await?;
-    let files = analyzer::files::collect_files(&config)?;
+    let files = analyzer::files::collect_files(&config, only_files.as_ref())?;
+
+    println!("FILES TO ANALYZE: {}", files.len());
 
     let mut all_nodes = Vec::new();
 
@@ -88,4 +102,37 @@ fn init_tracing() {
             EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info")),
         )
         .try_init();
+}
+
+fn load_target_file_set(path: &Path) -> Result<HashSet<PathBuf>> {
+    let list_dir = path
+        .parent()
+        .map(Path::to_path_buf)
+        .unwrap_or_else(|| PathBuf::from("."));
+    let raw = fs::read_to_string(path)?;
+    let mut targets = HashSet::new();
+
+    for (idx, line) in raw.lines().enumerate() {
+        let trimmed = line.trim();
+        if trimmed.is_empty() {
+            continue;
+        }
+
+        let joined = if Path::new(trimmed).is_absolute() {
+            PathBuf::from(trimmed)
+        } else {
+            list_dir.join(trimmed)
+        };
+
+        match fs::canonicalize(&joined) {
+            Ok(abs) => {
+                targets.insert(abs);
+            }
+            Err(err) => {
+                tracing::debug!("Skipping target '{}' (line {}): {err}", trimmed, idx + 1);
+            }
+        }
+    }
+
+    Ok(targets)
 }
