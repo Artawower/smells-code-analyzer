@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Auto-detect runtime: prefer bun, fallback to node
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+CLI_PATH="$SCRIPT_DIR/../dist/index.js"
+
+if command -v bun >/dev/null 2>&1; then
+  exec bun "$CLI_PATH" "$@"
+else
+  exec node "$CLI_PATH" "$@"
+fi

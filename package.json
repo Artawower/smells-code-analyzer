@@ -1,19 +1,19 @@
 {
   "name": "smells-code-analyzer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI tool powered by LSP and tree-sitter for finding dead and smells code from your project",
   "main": "dist/index.js",
-  "files": ["dist/**"],
+  "files": ["dist/**", "bin/sca"],
   "type": "module",
   "bin": {
-    "sca": "dist/index.js"
+    "sca": "bin/sca"
   },
   "exports": {
     ".": "./dist/*"
   },
   "scripts": {
     "dev": "ts-node --esm ./src/index.ts",
-    "build": "tsc --project tsconfig.json && chmod +x ./dist/index.js",
+    "build": "tsc --project tsconfig.json && chmod +x ./bin/sca",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
   },
