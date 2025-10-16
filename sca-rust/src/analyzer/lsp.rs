@@ -149,6 +149,9 @@ impl LspClient {
     }
 
     pub async fn references(&mut self, uri: &Url, position: Point) -> Result<usize> {
+        const MAX_RETRIES: u32 = 3;
+        const REQUEST_TIMEOUT: Duration = Duration::from_secs(30);
+
         let params = ReferenceParams {
             text_document_position: TextDocumentPositionParams {
                 text_document: TextDocumentIdentifier { uri: uri.clone() },
@@ -164,12 +167,50 @@ impl LspClient {
             partial_result_params: Default::default(),
         };
 
-        let response = self
-            .send_request("textDocument/references", serde_json::to_value(params)?)
-            .await?;
-        let locations: Option<Vec<Location>> =
-            serde_json::from_value(response).context("Invalid references response")?;
-        Ok(locations.map(|v| v.len()).unwrap_or(0))
+        let mut last_error = None;
+
+        for attempt in 1..=MAX_RETRIES {
+            let params_value = serde_json::to_value(&params)?;
+            
+            match tokio::time::timeout(
+                REQUEST_TIMEOUT,
+                self.send_request("textDocument/references", params_value),
+            )
+            .await
+            {
+                Ok(Ok(response)) => {
+                    let locations: Option<Vec<Location>> =
+                        serde_json::from_value(response).context("Invalid references response")?;
+                    return Ok(locations.map(|v| v.len()).unwrap_or(0));
+                }
+                Ok(Err(e)) => {
+                    tracing::warn!(
+                        "LSP references request failed (attempt {}/{}): {}",
+                        attempt,
+                        MAX_RETRIES,
+                        e
+                    );
+                    last_error = Some(e);
+                    if attempt < MAX_RETRIES {
+                        tokio::time::sleep(Duration::from_millis(500)).await;
+                    }
+                }
+                Err(_) => {
+                    let timeout_err = anyhow!("LSP request timeout after {:?}", REQUEST_TIMEOUT);
+                    tracing::warn!(
+                        "LSP references request timed out (attempt {}/{})",
+                        attempt,
+                        MAX_RETRIES
+                    );
+                    last_error = Some(timeout_err);
+                    if attempt < MAX_RETRIES {
+                        tokio::time::sleep(Duration::from_millis(500)).await;
+                    }
+                }
+            }
+        }
+
+        Err(last_error.unwrap_or_else(|| anyhow!("All retry attempts failed")))
     }
 
     pub async fn shutdown(&mut self) -> Result<()> {

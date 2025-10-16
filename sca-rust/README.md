@@ -33,6 +33,21 @@ To analyse a specific set of files listed in `changed-files.txt` (newline separa
 ```
 Paths may be absolute or relative to the list file; entries outside the analysed directory or missing on disk are skipped.
 
+### Snapshot Modes
+
+Generate a JSON snapshot of all detected errors (without emoji):
+```bash
+./target/release/sca --config-file ../config.json --generate-snapshot errors.json
+```
+
+Compare current analysis against a previous snapshot and fail with exit code if new errors are found:
+```bash
+./target/release/sca --config-file ../config.json --compare-snapshot errors.json
+```
+The `--compare-snapshot` flag will print all new errors and exit with an error if any new issues are detected.
+
+Both snapshot flags work with `--files-from` to scope the analysis to a specific file list.
+
 > **Note**  
 > The language server referenced in the config (e.g. `node .../typescript-language-server`)
 > must be accessible on the host machine before running the binary.
