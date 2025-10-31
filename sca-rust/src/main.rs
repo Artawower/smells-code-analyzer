@@ -93,7 +93,7 @@ async fn main() -> Result<()> {
     }
 
     if let Some(snapshot_path) = cli.compare_snapshot {
-        let new_errors = compare_with_snapshot(&all_nodes, &snapshot_path)?;
+        let new_errors = compare_with_snapshot(&all_nodes, &snapshot_path, &files)?;
         if !new_errors.is_empty() {
             println!("\nNew errors found:");
             for error in &new_errors {
@@ -192,12 +192,23 @@ fn collect_errors(node: &model::FullNodeInfo) -> Vec<model::FullNodeInfo> {
 fn compare_with_snapshot(
     nodes: &[model::FullNodeInfo],
     snapshot_path: &Path,
+    analyzed_files: &[PathBuf],
 ) -> Result<Vec<model::FullNodeInfo>> {
     let snapshot_content = fs::read_to_string(snapshot_path)
         .with_context(|| format!("Failed to read snapshot {}", snapshot_path.display()))?;
 
     let old_errors: Vec<model::FullNodeInfo> = serde_json::from_str(&snapshot_content)
         .with_context(|| format!("Failed to parse snapshot {}", snapshot_path.display()))?;
+
+    let analyzed_files_set: HashSet<&Path> = analyzed_files
+        .iter()
+        .map(|p| p.as_path())
+        .collect();
+
+    let old_errors_filtered: Vec<_> = old_errors
+        .into_iter()
+        .filter(|error| analyzed_files_set.contains(error.file_path.as_path()))
+        .collect();
 
     let current_errors: Vec<_> = nodes
         .iter()
@@ -207,7 +218,7 @@ fn compare_with_snapshot(
     let mut new_errors = Vec::new();
 
     for current in &current_errors {
-        let is_new = !old_errors.iter().any(|old| {
+        let is_new = !old_errors_filtered.iter().any(|old| {
             old.file_path == current.file_path
                 && old.name == current.name
                 && old.start_position.row == current.start_position.row
