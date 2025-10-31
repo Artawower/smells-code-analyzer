@@ -48,6 +48,8 @@ The `--compare-snapshot` flag will print all new errors and exit with an error i
 
 Both snapshot flags work with `--files-from` to scope the analysis to a specific file list.
 
+**Important:** Snapshots store file paths relative to `analyzeDirectory` from your config. This ensures snapshots are portable between different environments (e.g., local development vs CI), where absolute paths may differ.
+
 > **Note**  
 > The language server referenced in the config (e.g. `node .../typescript-language-server`)
 > must be accessible on the host machine before running the binary.

@@ -88,12 +88,12 @@ async fn main() -> Result<()> {
     println!("Found {} dead entities", dead_count);
 
     if let Some(snapshot_path) = cli.generate_snapshot {
-        generate_snapshot(&all_nodes, &snapshot_path)?;
+        generate_snapshot(&all_nodes, &snapshot_path, &config.analyze_directory)?;
         println!("Snapshot saved to {}", snapshot_path.display());
     }
 
     if let Some(snapshot_path) = cli.compare_snapshot {
-        let new_errors = compare_with_snapshot(&all_nodes, &snapshot_path, &files)?;
+        let new_errors = compare_with_snapshot(&all_nodes, &snapshot_path, &files, &config.analyze_directory)?;
         if !new_errors.is_empty() {
             println!("\nNew errors found:");
             for error in &new_errors {
@@ -164,15 +164,38 @@ fn load_target_file_set(path: &Path) -> Result<HashSet<PathBuf>> {
     Ok(targets)
 }
 
-fn generate_snapshot(nodes: &[model::FullNodeInfo], path: &Path) -> Result<()> {
+fn generate_snapshot(nodes: &[model::FullNodeInfo], path: &Path, base_dir: &Path) -> Result<()> {
     let errors: Vec<_> = nodes
         .iter()
         .flat_map(|node| collect_errors(node))
         .collect();
 
-    let json = serde_json::to_string_pretty(&errors)?;
+    let errors_with_relative_paths: Vec<_> = errors
+        .into_iter()
+        .map(|mut error| {
+            error.file_path = make_relative_path(&error.file_path, base_dir);
+            normalize_children_paths(&mut error.children, base_dir);
+            error
+        })
+        .collect();
+
+    let json = serde_json::to_string_pretty(&errors_with_relative_paths)?;
     fs::write(path, json)?;
     Ok(())
+}
+
+fn make_relative_path(absolute_path: &Path, base_dir: &Path) -> PathBuf {
+    absolute_path
+        .strip_prefix(base_dir)
+        .unwrap_or(absolute_path)
+        .to_path_buf()
+}
+
+fn normalize_children_paths(children: &mut [model::FullNodeInfo], base_dir: &Path) {
+    for child in children {
+        child.file_path = make_relative_path(&child.file_path, base_dir);
+        normalize_children_paths(&mut child.children, base_dir);
+    }
 }
 
 fn collect_errors(node: &model::FullNodeInfo) -> Vec<model::FullNodeInfo> {
@@ -193,12 +216,18 @@ fn compare_with_snapshot(
     nodes: &[model::FullNodeInfo],
     snapshot_path: &Path,
     analyzed_files: &[PathBuf],
+    base_dir: &Path,
 ) -> Result<Vec<model::FullNodeInfo>> {
     let snapshot_content = fs::read_to_string(snapshot_path)
         .with_context(|| format!("Failed to read snapshot {}", snapshot_path.display()))?;
 
-    let old_errors: Vec<model::FullNodeInfo> = serde_json::from_str(&snapshot_content)
+    let mut old_errors: Vec<model::FullNodeInfo> = serde_json::from_str(&snapshot_content)
         .with_context(|| format!("Failed to parse snapshot {}", snapshot_path.display()))?;
+
+    for error in &mut old_errors {
+        error.file_path = base_dir.join(&error.file_path);
+        absolutize_children_paths(&mut error.children, base_dir);
+    }
 
     let analyzed_files_set: HashSet<&Path> = analyzed_files
         .iter()
@@ -231,6 +260,13 @@ fn compare_with_snapshot(
     }
 
     Ok(new_errors)
+}
+
+fn absolutize_children_paths(children: &mut [model::FullNodeInfo], base_dir: &Path) {
+    for child in children {
+        child.file_path = base_dir.join(&child.file_path);
+        absolutize_children_paths(&mut child.children, base_dir);
+    }
 }
 
 fn format_error(error: &model::FullNodeInfo) -> String {
